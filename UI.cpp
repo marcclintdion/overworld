@@ -23,3 +23,7 @@
     #include "_MODEL_FOLDERS_/o2/o2_UI.cpp"     
     #include "_MODEL_FOLDERS_/o1/o1_UI.cpp"     
 
+
+
+    #include "_MODEL_FOLDERS_/sphereDetection/sphereDetection_UI.cpp"     
+

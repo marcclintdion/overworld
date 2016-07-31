@@ -85,12 +85,12 @@ load_o1_VBO();
 
 load_o1_INDICES();
 
-    o1_boundingBox[0] = -142.163269f;   
-    o1_boundingBox[1] =  0.000000f;  
-    o1_boundingBox[2] = 0.000000f;   
-    o1_boundingBox[3] =  50.074722f;  
-    o1_boundingBox[4] = 0.000000f;   
-    o1_boundingBox[5] =  36.538025f;  
+    o1_boundingBox[0] = -20.681725f;   
+    o1_boundingBox[1] =  20.714172f;  
+    o1_boundingBox[2] = -16.994961f;   
+    o1_boundingBox[3] =  16.970387f;  
+    o1_boundingBox[4] = -14.752719f;   
+    o1_boundingBox[5] =  14.540186f;  
 
     modelNumber += 1;
 

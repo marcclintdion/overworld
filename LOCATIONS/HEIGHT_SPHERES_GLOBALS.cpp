@@ -564,7 +564,7 @@ GLfloat   o7_HEIGHT_GROUP[11][4] =
 //----------------------------------
 GLuint   o7_HEIGHT_GROUP_TOTAL[11]; 
 //==================================================================================//_posX_posY_posZ_RADIUS
-GLfloat   o8_A_HEIGHT_GROUP[15][4] = 
+GLfloat   o8_HEIGHT_GROUP[27][4] =
 {
     {-115.87933349609375, 5.499151229858398, 7.764369964599609, 7.596558570861816},
     {-121.95658874511719, 5.499151229858398, 7.764369964599609, 7.596558570861816},
@@ -581,12 +581,6 @@ GLfloat   o8_A_HEIGHT_GROUP[15][4] =
     {-128.03382873535156, 18.27920150756836, 7.764369964599609, 7.5965576171875},
     {-134.111083984375, 18.27920150756836, 7.764369964599609, 7.596558094024658},
     {-109.80209350585938, 5.499151229858398, 7.764369964599609, 7.596558570861816},
-};
-//----------------------------------
-GLuint   o8_A_HEIGHT_GROUP_TOTAL[15]; 
-//==================================================================================//_posX_posY_posZ_RADIUS
-GLfloat   o8_B_HEIGHT_GROUP[12][4] = 
-{
     {-114.29893493652344, -0.08817871659994125, 8.014699935913086, 7.694011688232422},
     {-120.45414733886719, -0.0881788358092308, 8.014699935913086, 7.694011688232422},
     {-126.6093521118164, -0.08817867934703827, 8.014699935913086, 7.694012641906738},
@@ -599,9 +593,11 @@ GLfloat   o8_B_HEIGHT_GROUP[12][4] =
     {-129.6782684326172, -10.083672523498535, 7.9948930740356445, 2.70247745513916},
     {-123.73788452148438, -9.843656539916992, 8.05351448059082, 2.70247745513916},
     {-108.14373016357422, -0.08817871659994125, 8.014699935913086, 7.694011688232422},
+
 };
 //----------------------------------
-GLuint   o8_B_HEIGHT_GROUP_TOTAL[12]; 
+GLuint   o8_A_HEIGHT_GROUP_TOTAL[27];
+
 //==================================================================================//_posX_posY_posZ_RADIUS
 GLfloat   o9_HEIGHT_GROUP[53][4] = 
 {
@@ -669,375 +665,20 @@ GLuint   o9_HEIGHT_GROUP_TOTAL[53];
 //==============================================================================================================
 //-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
 //==============================================================================================================
+/*
 void o1_HEIGHT_GROUP_FUNCTION(void)
 {
     if(o1_isActive == true)
     {
         for(int i = 0; i < 20; i++)
         {
-            if((o1_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0]     &&     (o1_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0]     &&
-               (o1_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1]     &&     (o1_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1])
+            if((o1_HEIGHT_GROUP[i][0] + setPosition[0]) < o1_HEIGHT_GROUP[i][3]     &&     (o1_HEIGHT_GROUP[i][0] + setPosition[0]) > -o1_HEIGHT_GROUP[i][3]     &&
+               (o1_HEIGHT_GROUP[i][1] + setPosition[1]) < o1_HEIGHT_GROUP[i][3]     &&     (o1_HEIGHT_GROUP[i][1] + setPosition[1]) > -o1_HEIGHT_GROUP[i][3])
             {
                 groundLevelAdjust           += o1_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
+                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> setPosition[2](height)
             }
         }
     }
 }
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o10_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o10_isActive == true)
-    {
-        for(int i = 0; i < 17; i++)
-        {
-            if((o10_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o10_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o10_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o10_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o10_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o11_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o11_isActive == true)
-    {
-        for(int i = 0; i < 22; i++)
-        {
-            if((o11_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o11_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o11_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o11_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o11_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o12_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o12_isActive == true)
-    {
-        for(int i = 0; i < 32; i++)
-        {
-            if((o12_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o12_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o12_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o12_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o12_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o13_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o13_isActive == true)
-    {
-        for(int i = 0; i < 24; i++)
-        {
-            if((o13_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o13_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o13_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o13_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o13_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o14_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o14_isActive == true)
-    {
-        for(int i = 0; i < 12; i++)
-        {
-            if((o14_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o14_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o14_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o14_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o14_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o15_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o15_isActive == true)
-    {
-        for(int i = 0; i < 24; i++)
-        {
-            if((o15_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o15_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o15_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o15_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o15_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o16_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o16_isActive == true)
-    {
-        for(int i = 0; i < 22; i++)
-        {
-            if((o16_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o16_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o16_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o16_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o16_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o17_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o17_isActive == true)
-    {
-        for(int i = 0; i < 28; i++)
-        {
-            if((o17_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o17_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o17_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o17_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o17_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o18_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o18_isActive == true)
-    {
-        for(int i = 0; i < 25; i++)
-        {
-            if((o18_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o18_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o18_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o18_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o18_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o19_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o19_isActive == true)
-    {
-        for(int i = 0; i < 29; i++)
-        {
-            if((o19_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o19_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o19_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o19_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o19_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o2_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o2_isActive == true)
-    {
-        for(int i = 0; i < 36; i++)
-        {
-            if((o2_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o2_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o2_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o2_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o2_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o20_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o20_isActive == true)
-    {
-        for(int i = 0; i < 22; i++)
-        {
-            if((o20_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o20_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o20_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o20_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o20_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o21_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o21_isActive == true)
-    {
-        for(int i = 0; i < 26; i++)
-        {
-            if((o21_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o21_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o21_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o21_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o21_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o3_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o3_isActive == true)
-    {
-        for(int i = 0; i < 36; i++)
-        {
-            if((o3_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o3_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o3_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o3_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o3_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o4_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o4_isActive == true)
-    {
-        for(int i = 0; i < 29; i++)
-        {
-            if((o4_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o4_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o4_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o4_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o4_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o5_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o5_isActive == true)
-    {
-        for(int i = 0; i < 23; i++)
-        {
-            if((o5_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o5_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o5_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o5_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o5_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o6_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o6_isActive == true)
-    {
-        for(int i = 0; i < 13; i++)
-        {
-            if((o6_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o6_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o6_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o6_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o6_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o7_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o7_isActive == true)
-    {
-        for(int i = 0; i < 11; i++)
-        {
-            if((o7_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o7_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o7_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o7_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o7_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o8_A_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o8_A_isActive == true)
-    {
-        for(int i = 0; i < 15; i++)
-        {
-            if((o8_A_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o8_A_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o8_A_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o8_A_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o8_A_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o8_B_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o8_B_isActive == true)
-    {
-        for(int i = 0; i < 12; i++)
-        {
-            if((o8_B_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o8_B_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o8_B_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o8_B_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o8_B_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
-//==============================================================================================================
-//-----------------------------------_heightBounds[]_IS_THE_SCENE_CENTER_POINT(O,O,O)---------------------------
-//==============================================================================================================
-void o9_HEIGHT_GROUP_FUNCTION(void)
-{
-    if(o9_isActive == true)
-    {
-        for(int i = 0; i < 53; i++)
-        {
-            if((o9_HEIGHT_GROUP[i][0] + moveSet[0]) < heightBounds[0] && (o9_HEIGHT_GROUP[i][0] + moveSet[0]) > -heightBounds[0] && (o9_HEIGHT_GROUP[i][1] + moveSet[1]) < heightBounds[1] && (o9_HEIGHT_GROUP[i][1] + moveSet[1]) > -heightBounds[1]) 
-            {
-                groundLevelAdjust           += o9_HEIGHT_GROUP[i][2]; //_ADD_THE_HEIGHT_FOR_EACH_SPHERE_IN_THE_CHARACTER'S_ZONE
-                groundLevel_SpheresActive   += 1;                     //_DIVIDE_THE_CUMULATIVE_HEIGHTS_OF_ALL_DETECTED_SPHERES_BY_THIS_COUNTER_TO_OBTAIN_THE_AVERAGE_BY_WHICH_TO_ADJUST-> moveSet[2](height)
-            }
-        }
-    }
-}
+*/

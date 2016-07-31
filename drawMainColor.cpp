@@ -23,9 +23,13 @@ View_TRANSFORM();
 
 shaderNumber = 11;//terrainBase
 
+
+#include "LOCATIONS/HEIGHT_SPHERES_DISPLAY.cpp"
+
+
 if(o1_isActive)
 {
-    #include "_MODEL_FOLDERS_/o1/o1_RENDER.cpp"
+       #include "_MODEL_FOLDERS_/o1/o1_RENDER.cpp"
 }
 if(o2_isActive)
 {
@@ -114,6 +118,5 @@ if(o21_isActive)
 
 
 
-
-
+    #include "_MODEL_FOLDERS_/sphereDetection/sphereDetection_RENDER_.cpp"
 

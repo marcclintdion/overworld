@@ -1,7 +1,6 @@
 
 //__TODO__: ADD A VARIABLE NAMED <modelNameHere_shaderNumber> SO THAT SELECTING ON OBJECT CAN ACTIVATE THE ASSOCIATED SHADER CONTROLS: shaderNumber = modelNameHere_shaderNumber
 
-#include "LOCATIONS/HEIGHT_SPHERES_GLOBALS.cpp"
 
 
     #include "_MODEL_FOLDERS_/o21/o21_GLOBALS.cpp"  
@@ -53,7 +52,15 @@ bool        o21_isActive = false;
 bool        o22_isActive = false;
 
 #include "LOCATIONS/AREA_POSITIONS.cpp"
+GLuint   groundLevel_SpheresActive =     0;
+GLfloat  groundLevelAdjust         =     0.0;
+GLfloat  spheres_TOTAL_HEIGHT      =     0.0;
+GLfloat  delta_HEIGHT              =     0.0;
+#include "LOCATIONS/HEIGHT_SPHERES_GLOBALS.cpp"
+
 
 //---------------------------------------------------------------------------------------
 
+
+    #include "_MODEL_FOLDERS_/sphereDetection/sphereDetection_GLOBALS.cpp"  
 

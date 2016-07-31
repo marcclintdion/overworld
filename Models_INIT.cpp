@@ -22,3 +22,6 @@
     #include "_MODEL_FOLDERS_/o2/o2_INIT.cpp"     
     #include "_MODEL_FOLDERS_/o1/o1_INIT.cpp"     
 
+
+    #include "_MODEL_FOLDERS_/sphereDetection/sphereDetection_INIT.cpp"     
+

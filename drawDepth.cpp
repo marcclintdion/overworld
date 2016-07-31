@@ -50,3 +50,9 @@ shaderNumber = 11;
     #include "_MODEL_FOLDERS_/o2/o2_RENDER.cpp"  
     #include "_MODEL_FOLDERS_/o1/o1_RENDER.cpp"  
 
+
+    #include "_MODEL_FOLDERS_/Cube/Cube_RENDER.cpp"  
+
+
+    #include "_MODEL_FOLDERS_/sphereDetection/sphereDetection_RENDER.cpp"  
+

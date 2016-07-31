@@ -22,13 +22,15 @@ void main()
     
     
     
-
-    //====================================================================================  ADJUSTING THIS KEEPS THE ROTATION POINT
     highp vec4 tempPos      =   position;
-    tempPos                 =   tempPos - highp vec4( setPosition.x,  setPosition.y,  setPosition.z,  0.0);
-    gl_Position             =   projectionMatrix * tempPos;
-    //====================================================================================  AT SCREEN CENTER WHEN SCREEN IS MOVED
+   
+    
+    //tempPos                 =   tempPos - highp vec4( setPosition.x,  setPosition.y,  setPosition.z,  0.0);
+    
+    
+    gl_Position             =   projectionMatrix * (tempPos - highp vec4( setPosition.x,  setPosition.y,  setPosition.z,  0.0)    );
 
+    
   
    
 
