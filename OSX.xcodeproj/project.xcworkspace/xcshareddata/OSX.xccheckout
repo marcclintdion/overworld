@@ -10,6 +10,8 @@
 	<string>OSX</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>2081215619631DC334D5161298B02D9B4A6C86BA</key>
+		<string>https://github.com/marcclintdion/overworld.git</string>
 		<key>41D40FC0150257108D4403428CD690C4C03502CB</key>
 		<string>https://bitbucket.org/marcclintdion/osx_win_ios</string>
 		<key>B6743909108468608CD626C2445EFD26BA7A0E4E</key>
@@ -19,17 +21,19 @@
 	<string>OSX.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>2081215619631DC334D5161298B02D9B4A6C86BA</key>
+		<string>../..</string>
 		<key>41D40FC0150257108D4403428CD690C4C03502CB</key>
 		<string>../../../OSX_WIN_iOS</string>
 		<key>B6743909108468608CD626C2445EFD26BA7A0E4E</key>
-		<string>../..</string>
+		<string>../../../o1</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/marcclintdion/o1.git</string>
+	<string>https://github.com/marcclintdion/overworld.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B6743909108468608CD626C2445EFD26BA7A0E4E</string>
+	<string>2081215619631DC334D5161298B02D9B4A6C86BA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -47,6 +51,14 @@
 			<string>41D40FC0150257108D4403428CD690C4C03502CB</string>
 			<key>IDESourceControlWCCName</key>
 			<string>OSX_WIN_iOS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2081215619631DC334D5161298B02D9B4A6C86BA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>overworld</string>
 		</dict>
 	</array>
 </dict>

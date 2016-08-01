@@ -22,7 +22,7 @@ glUseProgram(terrainBase_SHADER);
     glUniform3f(UNIFORM_SET_POSITION_terrainBase, setPosition[0], setPosition[1], setPosition[2]);
 
 
-    glUniform1f(UNIFORM_f_0_terrainBase,              f_0_terrainBase);
+    glUniform1f(UNIFORM_f_0_terrainBase,              scaleModel);
     glUniform1f(UNIFORM_f_1_terrainBase,              f_1_terrainBase);
     glUniform1f(UNIFORM_f_2_terrainBase,              f_2_terrainBase);
     glUniform1f(UNIFORM_f_3_terrainBase,              f_3_terrainBase);

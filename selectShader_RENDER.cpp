@@ -2,6 +2,11 @@
 
 void SelectShader(var shaderNumber)
 {
+    if(shaderNumber ==   9)
+    {
+        #include    "_SHADERS/terrainSpheres/terrainSpheres_RENDER.cpp"
+    }
+    //-----------   
     
     if(shaderNumber ==   10)
     {

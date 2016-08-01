@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		25E6401F1D4C3DF700C04E6E /* terrainBase.frag in Resources */ = {isa = PBXBuildFile; fileRef = 25E6401D1D4C3DF700C04E6E /* terrainBase.frag */; };
 		25E640201D4C3DF700C04E6E /* terrainBase.vert in Resources */ = {isa = PBXBuildFile; fileRef = 25E6401E1D4C3DF700C04E6E /* terrainBase.vert */; };
+		25E954A01D4ED95000232E50 /* terrainSpheres.frag in Resources */ = {isa = PBXBuildFile; fileRef = 25E9549E1D4ED95000232E50 /* terrainSpheres.frag */; };
+		25E954A11D4ED95000232E50 /* terrainSpheres.vert in Resources */ = {isa = PBXBuildFile; fileRef = 25E9549F1D4ED95000232E50 /* terrainSpheres.vert */; };
 		3A0BF472177B8C1F00A6C4D7 /* GLEssentialsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0BF471177B8C1F00A6C4D7 /* GLEssentialsWindowController.m */; };
 		3A0BF47A177BC80300A6C4D7 /* GLEssentialsFullscreenWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0BF479177BC80300A6C4D7 /* GLEssentialsFullscreenWindow.m */; };
 		3A1598EA11B9DE0A001E7AB5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1598E611B9DE0A001E7AB5 /* MainMenu.xib */; };
@@ -30,6 +32,8 @@
 		256AC3F00F4B6AF500CF3369 /* OSX_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSX_Prefix.pch; sourceTree = "<group>"; };
 		25E6401D1D4C3DF700C04E6E /* terrainBase.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = terrainBase.frag; path = _SHADERS/terrainBase/terrainBase.frag; sourceTree = "<group>"; };
 		25E6401E1D4C3DF700C04E6E /* terrainBase.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = terrainBase.vert; path = _SHADERS/terrainBase/terrainBase.vert; sourceTree = "<group>"; };
+		25E9549E1D4ED95000232E50 /* terrainSpheres.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = terrainSpheres.frag; path = _SHADERS/terrainSpheres/terrainSpheres.frag; sourceTree = "<group>"; };
+		25E9549F1D4ED95000232E50 /* terrainSpheres.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = terrainSpheres.vert; path = _SHADERS/terrainSpheres/terrainSpheres.vert; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main_OSX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main_OSX.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -169,6 +173,8 @@
 				912951BB1C3561FF0037D2B4 /* finalComposite.vert */,
 				25E6401E1D4C3DF700C04E6E /* terrainBase.vert */,
 				25E6401D1D4C3DF700C04E6E /* terrainBase.frag */,
+				25E9549F1D4ED95000232E50 /* terrainSpheres.vert */,
+				25E9549E1D4ED95000232E50 /* terrainSpheres.frag */,
 			);
 			name = SHADERS;
 			sourceTree = "<group>";
@@ -234,12 +240,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E954A01D4ED95000232E50 /* terrainSpheres.frag in Resources */,
 				3A1598EA11B9DE0A001E7AB5 /* MainMenu.xib in Resources */,
 				912951BD1C3561FF0037D2B4 /* finalComposite.vert in Resources */,
 				25E6401F1D4C3DF700C04E6E /* terrainBase.frag in Resources */,
 				91E8EA541AD4B753005F09E8 /* cursor.png in Resources */,
 				3A1598EB11B9DE0A001E7AB5 /* InfoPlist.strings in Resources */,
 				25E640201D4C3DF700C04E6E /* terrainBase.vert in Resources */,
+				25E954A11D4ED95000232E50 /* terrainSpheres.vert in Resources */,
 				912951BC1C3561FF0037D2B4 /* finalComposite.frag in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

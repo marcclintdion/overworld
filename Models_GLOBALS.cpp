@@ -1,7 +1,7 @@
 
 //__TODO__: ADD A VARIABLE NAMED <modelNameHere_shaderNumber> SO THAT SELECTING ON OBJECT CAN ACTIVATE THE ASSOCIATED SHADER CONTROLS: shaderNumber = modelNameHere_shaderNumber
 
-
+GLfloat scaleModel = 0.0;
 
     #include "_MODEL_FOLDERS_/o21/o21_GLOBALS.cpp"  
     #include "_MODEL_FOLDERS_/o20/o20_GLOBALS.cpp"  
@@ -26,7 +26,7 @@
     #include "_MODEL_FOLDERS_/o2/o2_GLOBALS.cpp"  
     #include "_MODEL_FOLDERS_/o1/o1_GLOBALS.cpp"  
 
-GLfloat areaBounds[] = {46.399822f, 36.799984f}; 
+GLfloat areaBounds[] = {48.0f, 38.0f};
 
 bool        o1_isActive  = false;
 bool        o2_isActive  = false;
@@ -57,7 +57,7 @@ GLfloat  groundLevelAdjust         =     0.0;
 GLfloat  spheres_TOTAL_HEIGHT      =     0.0;
 GLfloat  delta_HEIGHT              =     0.0;
 #include "LOCATIONS/HEIGHT_SPHERES_GLOBALS.cpp"
-
+GLfloat  collisionOverlap          =     0.0;
 
 //---------------------------------------------------------------------------------------
 
