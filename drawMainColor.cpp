@@ -145,9 +145,16 @@ if(o21_isActive)
 shaderNumber = 9;//terrainSpheres
 
 
-//glEnable(GL_BLEND);
-//#include "LOCATIONS/HEIGHT_SPHERES_DISPLAY.cpp"
-//glDisable(GL_BLEND);
+glEnable(GL_BLEND);
+glCullFace(GL_NONE);
+glEnable(GL_SAMPLE_ALPHA_TO_COVERAGE_ARB);  //--------------------------------------------ORDER INDEPENDANT TRANSPARENCY
+glEnable(GL_ALPHA_TEST);
+glAlphaFunc(GL_GEQUAL, 0.25f);
+#include "LOCATIONS/HEIGHT_SPHERES_DISPLAY.cpp"
+glDisable(GL_BLEND);
+glCullFace(GL_BACK);
+glDisable(GL_SAMPLE_ALPHA_TO_COVERAGE_ARB);  //--------------------------------------------ORDER INDEPENDANT TRANSPARENCY
+glDisable(GL_ALPHA_TEST);
 
 
 shaderNumber = 12;//player

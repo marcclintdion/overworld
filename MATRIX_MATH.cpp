@@ -7,6 +7,7 @@ var     projectionMatrix[16];
 var     setTransform[16];
 
 var     viewMatrix[16];
+var     invertViewMatrix[16];
 
 var     viewShadowMatrix[16];
 
@@ -25,7 +26,6 @@ var     modelMatrix[16];
 var     modelViewMatrix[16];
 var     invertModelViewMatrix[16];
 
-var     invertViewMatrix[16];
 var     invertViewShadowMatrix[16];
 
 

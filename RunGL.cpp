@@ -98,16 +98,16 @@ void ViewShadow_TRANSFORM(void)
 void View_TRANSFORM(void)
 {
     
-    
     LoadIdentity(viewMatrix);
- 
- 
     Translate(   viewMatrix,     view_POSITION[0],          view_POSITION[1],               view_POSITION[2]);
     
-    Rotate(      viewMatrix,     1.0,    0.0,    0.0,       rotateModelWithMiddleMouse[0]);
-    Rotate(      viewMatrix,     0.0,    0.0,    1.0,      -rotateModelWithMiddleMouse[1]);
+    Rotate(      viewMatrix,            1.0,    0.0,    0.0,      rotateModelWithMiddleMouse[0]);
+    Rotate(      viewMatrix,            0.0,    0.0,    1.0,     -rotateModelWithMiddleMouse[1]);
     
- 
+    LoadIdentity(invertViewMatrix);
+    Rotate(      invertViewMatrix,      0.0,    0.0,    1.0,      rotateModelWithMiddleMouse[1]);
+    Rotate(      invertViewMatrix,      1.0,    0.0,    0.0,     -rotateModelWithMiddleMouse[0]);
+
  
     #ifdef __APPLE__
     if(CONSOLE_OUTPUT)
