@@ -29,11 +29,14 @@ void main()
     
     highp vec4 tempPos      =   position;
    
+
+//* ((tempPos + (highp vec4(normalize(normal), 0.0) * scale)-highp vec4(normalize(normal), 0.0)) - highp vec4( setPosition.x,  setPosition.y,  setPosition.z,  0.0));
     
-    //tempPos                 =   tempPos - highp vec4( setPosition.x,  setPosition.y,  setPosition.z,  0.0);
+  
+    tempPos                 =   (((tempPos + highp vec4(normal, 0.0) * scale)) - highp vec4( setPosition.x,  setPosition.y,  -setPosition.z,  0.0));
     
 
-    gl_Position             =   projectionMatrix * ((tempPos + highp vec4(normal, 0.0) * scale - highp vec4(normal, 0.0)) - highp vec4( setPosition.x,  setPosition.y,  setPosition.z,  0.0));
+    gl_Position             =   projectionMatrix * tempPos;
 
     
   

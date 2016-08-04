@@ -20,14 +20,13 @@
 View_TRANSFORM();
 //==============
 
-
-shaderNumber = 9;//terrainSpheres
-
-
+/*
 glEnable(GL_BLEND);
-#include "LOCATIONS/HEIGHT_SPHERES_DISPLAY.cpp"
-glDisable(GL_BLEND);
-
+glCullFace(GL_NONE);
+glEnable(GL_SAMPLE_ALPHA_TO_COVERAGE_ARB);  //--------------------------------------------ORDER INDEPENDANT TRANSPARENCY
+glEnable(GL_ALPHA_TEST);
+glAlphaFunc(GL_GEQUAL, 0.25f);
+*/
 
 shaderNumber = 11;//terrainBase
 
@@ -141,4 +140,16 @@ if(o21_isActive)
     #include "_MODEL_FOLDERS_/o21/o21_RENDER.cpp"
 }
 
+//====================================================================
+
+shaderNumber = 9;//terrainSpheres
+
+
+//glEnable(GL_BLEND);
+//#include "LOCATIONS/HEIGHT_SPHERES_DISPLAY.cpp"
+//glDisable(GL_BLEND);
+
+
+shaderNumber = 12;//player
+#include "_MODEL_FOLDERS_/sphereDetection/sphereDetection_RENDER_.cpp"
 

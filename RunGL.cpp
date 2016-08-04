@@ -145,11 +145,31 @@ void renderMainColor_PASS(void)
 {
 
     areaSelector();
-  
+    //-------------
+    groundLevel_SpheresActive = 0;
+    delta_HEIGHT  = 0;
+    groundLevelAdjust = 0;
+    #include "LOCATIONS/HEIGHT_SPHERE_TEST.cpp"
+    //========================================
+    
     //--------------------------
     #include "drawMainColor.cpp"
     //--------------------------
-
+    if(groundLevel_SpheresActive != 0)
+    {
+        spheres_TOTAL_HEIGHT = groundLevelAdjust / (float)groundLevel_SpheresActive; //_AVERAGE_OF_ALL_DETECTED_SPHERES_FOR_ALL_ACTIVE_AREAS
+    }
+    
+    delta_HEIGHT  = 0.0 - spheres_TOTAL_HEIGHT;
+    
+    if(delta_HEIGHT < setPosition[2])
+    {
+        setPosition[2] -= 0.15;
+    }
+    if(delta_HEIGHT > setPosition[2])
+    {
+        setPosition[2] += 0.15;
+    }
      
 
 }//__END->renderMainColor_PASS()

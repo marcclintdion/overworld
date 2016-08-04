@@ -23,7 +23,7 @@ if(KEY_Z)
 if (KEY_R)
 {
     //===============================================================================
-    //#include "../_SHADERS/terrainBase/terrainBase_INIT.cpp"
+    #include "../_SHADERS/terrainBase/terrainBase_INIT.cpp"
     //===============================================================================
     //===============================================================================
     #include "../_SHADERS/terrainSpheres/terrainSpheres_INIT.cpp"
@@ -50,19 +50,19 @@ if(KEY_V)
 
 if(KEY_RIGHT)
 {
-    setPosition[0] += 0.5;
+    setPosition[0] += 0.25;
 }
 if(KEY_LEFT)
 {
-    setPosition[0] -= 0.5;
+    setPosition[0] -= 0.25;
 }
 if(KEY_UP)
 {
-    setPosition[1] += 0.5;
+    setPosition[1] += 0.25;
 }
 if(KEY_DOWN)
 {
-    setPosition[1] -= 0.5;
+    setPosition[1] -= 0.25;
 }
 
 //if(CONSOLE_OUTPUT == true)

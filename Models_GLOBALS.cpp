@@ -52,6 +52,7 @@ bool        o21_isActive = false;
 bool        o22_isActive = false;
 
 #include "LOCATIONS/AREA_POSITIONS.cpp"
+GLfloat  heightBounds[] = {4, 4};
 GLuint   groundLevel_SpheresActive =     0;
 GLfloat  groundLevelAdjust         =     0.0;
 GLfloat  spheres_TOTAL_HEIGHT      =     0.0;

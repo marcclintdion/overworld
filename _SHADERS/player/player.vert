@@ -8,7 +8,10 @@ uniform             mat4    projectionMatrix;
 
 uniform     highp   vec3    setPosition;
 
+uniform     highp   float   scale;
+
 uniform     highp   float   f_0;
+
 
 varying     highp   vec2    uv0_PASS;
 
@@ -26,8 +29,11 @@ void main()
     
     highp vec4 tempPos      =   position;
    
+
+//* ((tempPos + (highp vec4(normalize(normal), 0.0) * scale)-highp vec4(normalize(normal), 0.0)) - highp vec4( setPosition.x,  setPosition.y,  setPosition.z,  0.0));
     
-    tempPos                 =   tempPos - highp vec4( setPosition.x,  setPosition.y,  -setPosition.z,  0.0);
+  
+    tempPos                 =   tempPos;
     
 
     gl_Position             =   projectionMatrix * tempPos;

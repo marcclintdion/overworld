@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25E513E41D4F195F008DB73E /* player.frag in Resources */ = {isa = PBXBuildFile; fileRef = 25E513E21D4F195F008DB73E /* player.frag */; };
+		25E513E51D4F195F008DB73E /* player.vert in Resources */ = {isa = PBXBuildFile; fileRef = 25E513E31D4F195F008DB73E /* player.vert */; };
 		25E6401F1D4C3DF700C04E6E /* terrainBase.frag in Resources */ = {isa = PBXBuildFile; fileRef = 25E6401D1D4C3DF700C04E6E /* terrainBase.frag */; };
 		25E640201D4C3DF700C04E6E /* terrainBase.vert in Resources */ = {isa = PBXBuildFile; fileRef = 25E6401E1D4C3DF700C04E6E /* terrainBase.vert */; };
 		25E954A01D4ED95000232E50 /* terrainSpheres.frag in Resources */ = {isa = PBXBuildFile; fileRef = 25E9549E1D4ED95000232E50 /* terrainSpheres.frag */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		256AC3F00F4B6AF500CF3369 /* OSX_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSX_Prefix.pch; sourceTree = "<group>"; };
+		25E513E21D4F195F008DB73E /* player.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = player.frag; path = _SHADERS/player/player.frag; sourceTree = "<group>"; };
+		25E513E31D4F195F008DB73E /* player.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = player.vert; path = _SHADERS/player/player.vert; sourceTree = "<group>"; };
 		25E6401D1D4C3DF700C04E6E /* terrainBase.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = terrainBase.frag; path = _SHADERS/terrainBase/terrainBase.frag; sourceTree = "<group>"; };
 		25E6401E1D4C3DF700C04E6E /* terrainBase.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = terrainBase.vert; path = _SHADERS/terrainBase/terrainBase.vert; sourceTree = "<group>"; };
 		25E9549E1D4ED95000232E50 /* terrainSpheres.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = terrainSpheres.frag; path = _SHADERS/terrainSpheres/terrainSpheres.frag; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				25E6401D1D4C3DF700C04E6E /* terrainBase.frag */,
 				25E9549F1D4ED95000232E50 /* terrainSpheres.vert */,
 				25E9549E1D4ED95000232E50 /* terrainSpheres.frag */,
+				25E513E31D4F195F008DB73E /* player.vert */,
+				25E513E21D4F195F008DB73E /* player.frag */,
 			);
 			name = SHADERS;
 			sourceTree = "<group>";
@@ -246,7 +252,9 @@
 				25E6401F1D4C3DF700C04E6E /* terrainBase.frag in Resources */,
 				91E8EA541AD4B753005F09E8 /* cursor.png in Resources */,
 				3A1598EB11B9DE0A001E7AB5 /* InfoPlist.strings in Resources */,
+				25E513E41D4F195F008DB73E /* player.frag in Resources */,
 				25E640201D4C3DF700C04E6E /* terrainBase.vert in Resources */,
+				25E513E51D4F195F008DB73E /* player.vert in Resources */,
 				25E954A11D4ED95000232E50 /* terrainSpheres.vert in Resources */,
 				912951BC1C3561FF0037D2B4 /* finalComposite.frag in Resources */,
 			);

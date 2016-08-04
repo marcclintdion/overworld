@@ -18,6 +18,11 @@ void SelectShader(var shaderNumber)
         #include    "_SHADERS/terrainBase/terrainBase_RENDER.cpp"
     }
     //-----------   
+    if(shaderNumber ==   12)
+    {
+        #include    "_SHADERS/player/player_RENDER.cpp"
+    }
+    //-----------   
 
 
 

@@ -67,12 +67,19 @@ static CVReturn MyDisplayLinkCallback(CVDisplayLinkRef displayLink,
 - (void) awakeFromNib
 {
     NSOpenGLPixelFormatAttribute attrs[] =
-	{
-		NSOpenGLPFADoubleBuffer,
-		NSOpenGLPFADepthSize, 24,
-
-		0
-	};
+    {
+        NSOpenGLPFADoubleBuffer, 1,
+        NSOpenGLPFADepthSize, 24,
+        NSOpenGLPFASampleAlpha,
+        //NSOpenGLPFASupersample,
+        NSOpenGLPFAMultisample,
+        NSOpenGLPFASampleBuffers, 1,
+        NSOpenGLPFASamples, 4,
+        
+        
+        
+        0
+    };
 	
 	NSOpenGLPixelFormat *pf = [[[NSOpenGLPixelFormat alloc] initWithAttributes:attrs] autorelease];
 	
