@@ -85,12 +85,12 @@ load_o3_VBO();
 
 load_o3_INDICES();
 
-    o3_boundingBox[0] = -61.832790f;   
+    o3_boundingBox[0] = -61.833008f;   
     o3_boundingBox[1] =  0.000000f;  
     o3_boundingBox[2] = 0.000000f;   
-    o3_boundingBox[3] =  50.785515f;  
+    o3_boundingBox[3] =  50.785728f;  
     o3_boundingBox[4] = 0.000000f;   
-    o3_boundingBox[5] =  31.045609f;  
+    o3_boundingBox[5] =  31.045731f;  
 
     modelNumber += 1;
 

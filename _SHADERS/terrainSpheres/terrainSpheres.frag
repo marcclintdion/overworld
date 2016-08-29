@@ -34,7 +34,7 @@ void main()
     gl_FragColor.xyz        =   colorTexture.xyz    * highp vec3(0.7, 0.9, 1.0)    ;
 
     
-    gl_FragColor.a          =   f_0 * (1.0 - VnDotL);
+    gl_FragColor.a          =     (1.0 - VnDotL);
   
   
 }

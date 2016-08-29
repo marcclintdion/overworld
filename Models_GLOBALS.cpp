@@ -57,7 +57,7 @@ GLuint   groundLevel_SpheresActive =     0;
 GLfloat  groundLevelAdjust         =     0.0;
 GLfloat  spheres_TOTAL_HEIGHT      =     0.0;
 GLfloat  delta_HEIGHT              =     0.0;
-#include "LOCATIONS/HEIGHT_SPHERES_GLOBALS.cpp"
+#include "LOCATIONS/COLLISION_SPHERES_GROUP_GLOBALS.cpp"
 GLfloat  collisionOverlap          =     0.0;
 
 //---------------------------------------------------------------------------------------

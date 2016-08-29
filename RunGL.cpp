@@ -149,7 +149,7 @@ void renderMainColor_PASS(void)
     groundLevel_SpheresActive = 0;
     delta_HEIGHT  = 0;
     groundLevelAdjust = 0;
-    #include "LOCATIONS/HEIGHT_SPHERE_TEST.cpp"
+    //#include "LOCATIONS/HEIGHT_SPHERE_TEST.cpp"
     //========================================
     
     //--------------------------
@@ -256,7 +256,7 @@ void InitGL( void )//__BEGIN_INIT__@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     glDepthFunc(GL_LESS);
     //glDepthMask(1);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    //glAlphaFunc(GL_GREATER, 0.1);
+    glAlphaFunc(GL_GREATER, 0.1);
     glDisable(GL_BLEND);
 //====================================================================================================================================
 

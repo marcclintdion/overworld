@@ -84,7 +84,7 @@ void ConfigureAndLoadTexture(GLubyte *textureData, GLint texWidth, GLint texHeig
         FIBITMAP *dib = FreeImage_Load(fifmt, textureFileName,0);
         
         FIBITMAP *temp = dib;
-        dib = FreeImage_ConvertTo32Bits( temp);
+        dib = FreeImage_ConvertTo32Bits(temp);
         FreeImage_Unload(temp);
         //--------------------------------------------------------------------
         if( dib != NULL )

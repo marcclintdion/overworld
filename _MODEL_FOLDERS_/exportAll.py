@@ -76,7 +76,7 @@ if bpy.context.selected_objects:
 
         #path = r"C:\marcclintdion\\Documents\CONTENT_GLSL\!!!!_ELEMENTS_OF_ZELDA\monkeyHeadCave\_MODEL_FOLDERS_"
         
-        path = r"/Users/marcdion1974/Documents/CONTENT_GLSL/JULY_2016_A/o1/_MODEL_FOLDERS_/"
+        path = r"/Users/marcdion1974/Documents/CONTENT_GLSL/JULY_2016_A/overworld/_MODEL_FOLDERS_/"
 
 
         #------------------------------------
@@ -803,7 +803,7 @@ filename =  'Models_GLOBALS_STRINGS.cpp'
 #_OSX
 
 
-path = r"/Users/marcdion1974/Documents/CONTENT_GLSL/JULY_2016_A/o1/"   #_OSX
+path = r"/Users/marcdion1974/Documents/CONTENT_GLSL/JULY_2016_A/overworld/"   #_OSX
 
 file = open(path  + '/'  + 'STRINGS' + '/' + filename, "w", newline="\n")
 
