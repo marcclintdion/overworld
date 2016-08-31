@@ -65,13 +65,13 @@ if(KEY_DOWN)
     setPosition[1] -= 0.25;
 }
 
-//if(CONSOLE_OUTPUT == true)
-//{
+if(CONSOLE_OUTPUT == true)
+{
     NSLog(@"setPosition[]  %f, %f, %f = ", setPosition[0], setPosition[1], setPosition[2]);
 
     NSLog(@"areaBounds[]  %f, %f = ", areaBounds[0], areaBounds[1]);
 
-//}
+}
 
 
 #ifdef WIN32
